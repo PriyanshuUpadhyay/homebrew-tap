@@ -1,18 +1,8 @@
-# Priyanshuupadhyay Tap
+# priyanshuupadhyay/tap
 
-## How do I install these formulae?
+Homebrew formulae for [jello](https://github.com/PriyanshuUpadhyay/jello): Claude and Codex
+account profiles with a local usage HUD for macOS.
 
-`brew install priyanshuupadhyay/tap/<formula>`
+    brew install priyanshuupadhyay/tap/jello
 
-Or `brew tap priyanshuupadhyay/tap` and then `brew install <formula>`.
-
-Or, in a `brew bundle` `Brewfile`:
-
-```ruby
-tap "priyanshuupadhyay/tap"
-brew "<formula>"
-```
-
-## Documentation
-
-`brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
+See the [project README](https://github.com/PriyanshuUpadhyay/jello#readme) for setup.
