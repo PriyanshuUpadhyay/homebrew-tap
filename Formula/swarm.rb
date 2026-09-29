@@ -1,8 +1,8 @@
 class Swarm < Formula
   desc "Message bus and pane control for a tree of agent CLIs"
   homepage "https://github.com/PriyanshuUpadhyay/swarm"
-  url "https://github.com/PriyanshuUpadhyay/swarm/archive/refs/tags/v0.1.1.tar.gz"
-  sha256 "1addb0670799c3a20e21db1fdec58e57741a8ffdb8932894b25694f6af626340"
+  url "https://github.com/PriyanshuUpadhyay/swarm/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "9d945f917a84b971ff56a92b4cc567ca25ea51e7d24e6c38e10e9ec314af58d4"
   license "MIT"
   head "https://github.com/PriyanshuUpadhyay/swarm.git", branch: "main"
 
