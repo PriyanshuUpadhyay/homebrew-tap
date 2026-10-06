@@ -1,8 +1,8 @@
 class Yelo < Formula
   desc "Claude and Codex account profiles and a local usage HUD for macOS"
   homepage "https://github.com/PriyanshuUpadhyay/yelo"
-  url "https://github.com/PriyanshuUpadhyay/yelo/archive/refs/tags/v0.9.0.tar.gz"
-  sha256 "216cff95d1d594e4f619e600f869577bae152c8014f2c07c2c584927626a32af"
+  url "https://github.com/PriyanshuUpadhyay/yelo/archive/refs/tags/v0.10.0.tar.gz"
+  sha256 "3c2c739ac46a00be23db7dbf94b724bdb86d778dc28cd380e8cc8d8653043386"
   license "MIT"
   head "https://github.com/PriyanshuUpadhyay/yelo.git", branch: "main"
 
