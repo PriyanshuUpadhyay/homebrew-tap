@@ -1,22 +1,21 @@
 class Swarm < Formula
-  desc "Moved: the swarm-app cask installs the swarm CLI"
+  desc "Message bus and pane control for a tree of agent CLIs"
   homepage "https://github.com/PriyanshuUpadhyay/swarm"
   url "https://github.com/PriyanshuUpadhyay/swarm/archive/refs/tags/v0.9.0.tar.gz"
   sha256 "6cbc224789b9bc0ceaa760b9b19543fc953d233c9a23b5be223579511d7844a4"
   license "MIT"
 
-  deprecate! date: "2026-10-11", because: "is installed by the swarm-app cask",
-             replacement_cask: "priyanshuupadhyay/tap/swarm-app"
+  # A pointer for one release: `brew upgrade` moves formulae first, so this frees bin/swarm
+  # before the swarm-app cask links its own copy (ADR 0048). The next release removes it.
+  deprecate! date:             "2026-10-11",
+             because:          "the swarm-app cask installs the swarm CLI with the app",
+             replacement_cask: "swarm-app"
 
   def install
-    # A keg must hold one file.
-    (pkgshare/"MOVED").write "swarm now ships inside Swarm.app; see the swarm-app cask.\n"
+    doc.install "README.md"
   end
 
-  def caveats
-    <<~EOS
-      swarm now ships inside Swarm.app. Run this once to link it onto PATH:
-        brew update && brew upgrade priyanshuupadhyay/tap/swarm; brew reinstall --cask --force priyanshuupadhyay/tap/swarm-app
-    EOS
+  test do
+    assert_path_exists doc/"README.md"
   end
 end
