@@ -19,4 +19,8 @@ class Swarm < Formula
         brew update && brew upgrade priyanshuupadhyay/tap/swarm; brew reinstall --cask --force priyanshuupadhyay/tap/swarm-app
     EOS
   end
+
+  test do
+    assert_path_exists pkgshare/"MOVED"
+  end
 end
