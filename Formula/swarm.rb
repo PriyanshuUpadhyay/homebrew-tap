@@ -1,19 +1,22 @@
 class Swarm < Formula
-  desc "Message bus and pane control for a tree of agent CLIs"
+  desc "Moved: the swarm-app cask installs the swarm CLI"
   homepage "https://github.com/PriyanshuUpadhyay/swarm"
-  url "https://github.com/PriyanshuUpadhyay/swarm/archive/refs/tags/v0.8.0.tar.gz"
-  sha256 "c73a298ad04b257967968176a938ae77db2441bb026484c97ada0331a8a50db1"
+  url "https://github.com/PriyanshuUpadhyay/swarm/archive/refs/tags/v0.9.0.tar.gz"
+  sha256 "6cbc224789b9bc0ceaa760b9b19543fc953d233c9a23b5be223579511d7844a4"
   license "MIT"
-  head "https://github.com/PriyanshuUpadhyay/swarm.git", branch: "main"
 
-  depends_on "rust" => :build
-  depends_on "tmux" # the default pane host
+  deprecate! date: "2026-10-11", because: "is installed by the swarm-app cask",
+             replacement_cask: "priyanshuupadhyay/tap/swarm-app"
 
   def install
-    system "cargo", "install", *std_cargo_args
+    # A keg must hold one file.
+    (pkgshare/"MOVED").write "swarm now ships inside Swarm.app; see the swarm-app cask.\n"
   end
 
-  test do
-    assert_match version.to_s, shell_output("#{bin}/swarm --version")
+  def caveats
+    <<~EOS
+      swarm now ships inside Swarm.app. Run this once to link it onto PATH:
+        brew update && brew upgrade priyanshuupadhyay/tap/swarm; brew reinstall --cask --force priyanshuupadhyay/tap/swarm-app
+    EOS
   end
 end
