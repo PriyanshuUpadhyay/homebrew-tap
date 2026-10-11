@@ -7,7 +7,6 @@ cask "swarm-app" do
   desc "Chat app for a tree of agent CLIs"
   homepage "https://github.com/PriyanshuUpadhyay/swarm"
 
-  # The cask owns the CLI link, so one upgrade moves the app and `swarm` together (ADR 0048).
   depends_on formula: "tmux"
   depends_on macos: :tahoe
 
@@ -19,7 +18,7 @@ cask "swarm-app" do
       1. Open Swarm from Applications. When macOS says it cannot verify the app, click Done.
       2. Open System Settings > Privacy & Security and scroll to Security.
       3. Next to "Swarm was blocked", click Open Anyway and confirm with your password.
-    If Open Anyway does not show, run:
+    If Open Anyway does not show, or macOS blocks the swarm command, run:
       xattr -dr com.apple.quarantine /Applications/Swarm.app
   EOS
 end
