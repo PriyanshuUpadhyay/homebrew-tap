@@ -1,6 +1,6 @@
 cask "swarm-app" do
-  version "0.9.0"
-  sha256 "69b15c7c0063a8188ab6dfc6aac7d0e4f4515e7bf0823ccf7edbefae8c2ee69a"
+  version "0.9.1"
+  sha256 "0cbb5f8401f540f60021025bc644ee1e47bd2afd403f55464318f614f7b0babe"
 
   url "https://github.com/PriyanshuUpadhyay/swarm/releases/download/v#{version}/Swarm-#{version}.dmg"
   name "Swarm"

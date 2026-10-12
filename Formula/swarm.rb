@@ -1,11 +1,11 @@
 class Swarm < Formula
   desc "Moved: the swarm-app cask installs the swarm CLI"
   homepage "https://github.com/PriyanshuUpadhyay/swarm"
-  url "https://github.com/PriyanshuUpadhyay/swarm/archive/refs/tags/v0.9.0.tar.gz"
-  sha256 "6cbc224789b9bc0ceaa760b9b19543fc953d233c9a23b5be223579511d7844a4"
+  url "https://github.com/PriyanshuUpadhyay/swarm/archive/refs/tags/v0.9.1.tar.gz"
+  sha256 "239912517a521b8f935ec59b9eb63bc6851958a0f12b7d3744f613d5d5bba9e6"
   license "MIT"
 
-  deprecate! date: "2026-10-11", because: "is installed by the swarm-app cask",
+  deprecate! date: "2026-10-12", because: "is installed by the swarm-app cask",
              replacement_cask: "priyanshuupadhyay/tap/swarm-app"
 
   def install
