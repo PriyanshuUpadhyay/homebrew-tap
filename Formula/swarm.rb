@@ -1,8 +1,8 @@
 class Swarm < Formula
   desc "Message bus and pane control for a tree of agent CLIs"
   homepage "https://github.com/PriyanshuUpadhyay/swarm"
-  url "https://github.com/PriyanshuUpadhyay/swarm/releases/download/v0.0.39/swarm-0.0.39-macos-arm64.tar.gz"
-  sha256 "5354ce2cfd1d3e95710beb4f7a2db8ca42f91b14e0ccaf5e3a1b7794df7ae2a5"
+  url "https://github.com/PriyanshuUpadhyay/swarm/releases/download/v0.0.40/swarm-0.0.40-macos-arm64.tar.gz"
+  sha256 "dc1553d5061ad18a35fea9a2dab60ac92ff12ff323acd31c365901b37f5bb9b2"
   license "MIT"
 
   depends_on arch: :arm64
